@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "ms-vscode.vscode-typescript-next",
+    "biomejs.biome",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
