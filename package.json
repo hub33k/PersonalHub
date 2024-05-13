@@ -2,7 +2,16 @@
   "name": "personal-hub",
   "private": true,
   "type": "module",
+  "scripts": {
+    "lint": "biome lint ./apps ./libs",
+    "check": "biome check ./apps ./libs",
+    "check:apply-safe": "biome check --apply ./apps ./libs",
+    "check:apply-unsafe": "biome check --apply-unsafe ./apps ./libs",
+    "format": "biome format ./apps ./libs",
+    "format:write": "biome format --write ./apps ./libs"
+  },
   "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
     "@types/bun": "latest"
   }
 }
