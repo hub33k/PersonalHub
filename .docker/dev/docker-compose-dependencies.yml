@@ -1,0 +1,25 @@
+services:
+  database:
+    image: postgres:16-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./init-database.sql:/docker-entrypoint-initdb.d/init-database.sql
+      - pg_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    environment:
+      PGADMIN_DEFAULT_EMAIL: a@a.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - '8888:80'
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  pg_data:
+  pgadmin-data:

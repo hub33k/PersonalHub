@@ -4,6 +4,8 @@
   "type": "module",
   "workspaces": ["apps/*", "libs/*"],
   "scripts": {
+    "dc": "docker-compose -p personal-hub -f",
+    "dc:dependencies": "bun run dc .docker/dev/docker-compose-dependencies.yml",
     "lint": "biome lint ./apps ./libs",
     "check": "biome check ./apps ./libs",
     "check:apply-safe": "biome check --apply ./apps ./libs",
