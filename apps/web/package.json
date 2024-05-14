@@ -21,6 +21,8 @@
     "typecheck": "tsc -p ./tsconfig.json"
   },
   "dependencies": {
+    "@ph/ui": "workspace:*",
+    "@ph/utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query": "^5.36.0",
     "@tanstack/react-query-devtools": "^5.36.0",
@@ -38,6 +40,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@ph/config": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

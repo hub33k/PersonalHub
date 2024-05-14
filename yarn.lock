@@ -1743,6 +1743,7 @@
   version "workspace:apps/web"
   resolved "workspace:apps/web"
   devDependencies:
+    "@ph/config" "libs/config"
     "@types/node" "^20"
     "@types/react" "^18"
     "@types/react-dom" "^18"
@@ -1752,6 +1753,8 @@
     tailwindcss "^3.4.3"
     typescript "^5"
   dependencies:
+    "@ph/ui" "libs/ui"
+    "@ph/utils" "libs/utils"
     "@t3-oss/env-nextjs" "^0.10.1"
     "@tanstack/react-query" "^5.36.0"
     "@tanstack/react-query-devtools" "^5.36.0"

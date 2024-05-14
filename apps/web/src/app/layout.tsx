@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 
 import { AppProviders } from '@/modules/App';
 import { APP_DESCRIPTION, APP_NAME, ROUTES } from '@/modules/Config';
+import { cn } from '@ph/ui';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -19,7 +20,7 @@ interface IRootLayoutProps extends React.PropsWithChildren {}
 
 export default function RootLayout({ children }: Readonly<IRootLayoutProps>) {
   return (
-    <html lang="en" className={`dark ${GeistSans.variable}`}>
+    <html lang="en" className={cn('dark', GeistSans.variable)}>
       <head>
         <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
       </head>
