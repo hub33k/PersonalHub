@@ -1,0 +1,16 @@
+{
+  "name": "@ph/config",
+  "private": true,
+  "version": "0.0.0",
+  "module": "./src/index.ts",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "check:apply-safe": "biome check --apply .",
+    "check:apply-unsafe": "biome check --apply-unsafe .",
+    "format": "biome format .",
+    "format:write": "biome format --write .",
+    "typecheck": "tsc -p ./tsconfig.json"
+  }
+}
