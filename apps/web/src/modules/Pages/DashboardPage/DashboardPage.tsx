@@ -1,5 +1,6 @@
 import { CreatePost } from '@/modules/Post/create-post';
 import { api } from '@/trpc/server';
+import { UserButton } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 
 export const dashboardPageMetadata: Metadata = {
@@ -13,6 +14,8 @@ export const DashboardPage = async () => {
   return (
     <>
       <h1 className="text-3xl text-blue-500">Dashboard</h1>
+
+      <UserButton />
 
       <div className="flex flex-col gap-2 mb-4">
         <p className="text-2xl text-white">

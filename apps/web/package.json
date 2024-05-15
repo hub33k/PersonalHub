@@ -21,6 +21,7 @@
     "typecheck": "tsc -p ./tsconfig.json"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.0.9",
     "@ph/ui": "workspace:*",
     "@ph/utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.10.1",
