@@ -1,2 +1,3 @@
 [test]
 logLevel = "debug"
+root = "./src/modules/"
