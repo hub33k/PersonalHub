@@ -2,6 +2,9 @@ import { createTRPCRouter, publicProcedure } from '@/server/api/trpc';
 import { posts } from '@/server/db/schema';
 import { z } from 'zod';
 
+// TODO (hub33k): handle errors
+// TODO (hub33k): add contracts?, zod schema for frontend and backend
+
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
@@ -15,9 +18,9 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ name: z.string().min(1) }))
     .mutation(async ({ ctx, input }) => {
       // simulate a slow db call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      await ctx.db.insert(posts).values({
+      return await ctx.db.insert(posts).values({
         name: input.name,
       });
     }),
